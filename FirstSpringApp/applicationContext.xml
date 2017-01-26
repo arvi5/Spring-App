@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<!-- enable this code to understand autowiring by type -->
+	<!-- <bean id="student" class="co.edureka.autowiring.Student" autowire="byName"> 
+		<property name="name" value="aravinda"></property> <property name="id" value="505"></property> 
+		<property name="hostel" ref="hostel"></property> </bean> <bean id="hostel" 
+		class="co.edureka.autowiring.Hostel"> <property name="city" value="philadelphia"></property> 
+		<property name="hostelName" value="devon"></property> </bean> -->
+
+
+	<!-- enable this code to understand autowiring by name -->
+	<!-- <bean id="student" class="co.edureka.autowiring.Student" autowire="byType"> 
+		<property name="name" value="aravinda"></property> <property name="id" value="505"></property> 
+		</bean> <bean id="fivestarhostel" class="co.edureka.autowiring.Hostel"> <property 
+		name="city" value="philadelphia"></property> <property name="hostelName" 
+		value="devon"></property> </bean> -->
+
+
+
+	<!-- enable this code to understand autowiring constructorS -->
+	<!-- <bean id="student" class="co.edureka.autowiring.Student" autowire="constructor">
+		<constructor-arg name="name" value="aravinda"></constructor-arg>
+		<constructor-arg name="id" value="505"></constructor-arg>
+	</bean>
+	<bean id="fivestarhostel" class="co.edureka.autowiring.Hostel">
+		<property name="city" value="philadelphia"></property>
+		<property name="hostelName" value="devon"></property>
+	</bean>
+	 -->
+	<!-- enable this code to understand autowiring using annotations -->
+	<bean id="student" class="co.edureka.autowiring.Student" >
+		<property name="name" value="aravinda"></property>
+		<property name="id" value="505"></property>
+	</bean>
+	<bean id="hostel1" class="co.edureka.autowiring.Hostel">
+		<property name="city" value="philadelphia"></property>
+		<property name="hostelName" value="devon"></property>
+	</bean>
+	<bean id="hostel2" class="co.edureka.autowiring.Hostel">
+		<property name="city" value="new jersey"></property>
+		<property name="hostelName" value="forts"></property>
+	</bean>
+	<!-- In order to use annotations along with xml bean configuration we need to use context annotation and 
+	for context annotation to work we have to include xmlns:context in this xml file -->
+	<context:annotation-config/>
+</beans>

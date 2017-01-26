@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="helloworld" class="co.edureka.demo.HelloWorld"></bean>
+	<bean id="user" class="co.edureka.demo.User">
+		<property name="car" ref="car"></property>
+	</bean>
+	<bean id="car" class="co.edureka.demo.Car">
+		<property name="name" value="i20"></property>
+		<property name="perDayCost" value="2000"></property>
+	</bean>
+</beans>
