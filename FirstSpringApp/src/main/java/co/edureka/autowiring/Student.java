@@ -40,7 +40,7 @@ public class Student {
 	}
 
 	public String toString() {
-		return "student [name: " + name + ", id: " + id + ", Hostel: " + hostel + "]";
+		return "student [Name: " + name + ", Id: " + id + ", Hostel: " + hostel + "]";
 
 	}
 
